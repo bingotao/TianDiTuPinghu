@@ -1,0 +1,56 @@
+﻿@import "~/Extends/default.less";
+
+.servicetype-filter {
+    border: 1px solid @border-color-base;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    .servicetype-filter-name {
+        text-align: center;
+        color: #333;
+        padding: 8px 0;
+        background-color: @border-color-split;
+        font-size: 16px;
+    }
+
+    .servicetype-filter-item {
+        position: relative;
+        padding: 8px 0;
+        text-align: center;
+        border-top: 1px solid @border-color-base;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.3s ease;
+
+        > span {
+            display: block;
+        }
+
+        .anticon-close-circle {
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            color: @primary-color;
+            transition: 0.3s ease;
+            display: none;
+        }
+
+        .anticon-close-circle:hover {
+            color: tint(@primary-color,20%);
+        }
+    }
+
+    .servicetype-filter-item:hover {
+        background-color: tint(@border-color-split,60%);
+    }
+
+    .servicetype-filter-item.active {
+        background-color: tint(@border-color-split,60%);
+        color: @primary-color;
+
+        .anticon-close-circle {
+            display: block;
+        }
+    }
+}

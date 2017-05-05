@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterBlank.cshtml";
+    Bundles.Reference("Extends/Components/Map", "page");
+}
+
+<script>
+    var config = @Html.Raw(@ViewBag.Map);
+</script>
+<link href="@ViewBag.BaseUrl/Reference/leaflet/leaflet.css" rel="stylesheet" />
+<link href="@ViewBag.BaseUrl/Reference/leaflet-plugins/fullScreen/Control.FullScreen.css" rel="stylesheet" />
+<link href="@ViewBag.BaseUrl/Reference/leaflet-plugins/draw/leaflet.draw.css" rel="stylesheet" />
+<link href="@ViewBag.BaseUrl/Reference/leaflet-plugins/contextmenu/leaflet.contextmenu.min.css" rel="stylesheet" />
+
+<script src="@ViewBag.BaseUrl/Reference/leaflet/leaflet.js"></script>
+<script src="@ViewBag.BaseUrl/Reference/leaflet-plugins/fullScreen/Control.FullScreen.js"></script>
+<script src="@ViewBag.BaseUrl/Reference/leaflet-plugins/draw/leaflet.draw.js"></script>
+<script src="@ViewBag.BaseUrl/Reference/leaflet-plugins/contextmenu/leaflet.contextmenu.min.js"></script>
+<div class="main">
+    <div id="nav"></div>
+    <div id="searchPanel"></div>
+    <div id="searchresults"></div>
+    <div id="poiDetailsPanel"></div>
+    <div id="appcenter"></div>
+    <div id="toolbar"></div>
+    <div id="footernav"></div>
+    <div id="currentLevel">当前级别：<span></span>&ensp;级</div>
+    <div class="map"></div>
+</div>
+
+@Bundles.RenderStylesheets("page")
+@Bundles.RenderScripts("page")

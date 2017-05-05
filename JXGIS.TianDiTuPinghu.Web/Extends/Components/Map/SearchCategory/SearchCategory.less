@@ -1,0 +1,88 @@
+﻿@import "~/Extends/default.less";
+
+.searchcategory-panel.active {
+    display: block;
+}
+
+.searchcategory-panel {
+    width: 100%;
+    box-shadow: 0 2px 2px rgba(0,0,0,.15);
+    background-color: white;
+    padding: 0 10px;
+    display: none;
+
+    .searchcategory-panel-search {
+        padding: 10px;
+        border-bottom: 1px solid @border-color-split;
+    }
+
+    .searchcategory-item {
+        margin: 5px 0 5px 5px;
+    }
+
+    img {
+        margin: 5px 0 0 5px;
+    }
+
+    .subitem {
+        cursor: pointer;
+        margin: 0 5px;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+    .subitem-bg {
+        font-weight: 700;
+        font-size: floor((@font-size-base * 1.2));
+        color: @primary-color;
+    }
+
+    .ant-input-group {
+        .ant-input {
+            border-right: 0;
+        }
+
+        .ant-btn {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+
+            &:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        .btn-search-clear {
+            position: absolute;
+            right: 45px;
+            z-index: 2;
+            top: 8px;
+            color: #ccc;
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+    .searchcategory-panel-sliderup {
+        cursor: pointer;
+        border-top: 1px solid @border-color-split;
+        text-align: center;
+        padding: 3px 0;
+        color: #bbb;
+        transition: 0.2s all;
+
+        &:hover {
+            color: @primary-color;
+            border-color: @primary-color;
+        }
+    }
+}

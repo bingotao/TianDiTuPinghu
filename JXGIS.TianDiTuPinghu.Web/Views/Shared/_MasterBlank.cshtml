@@ -1,0 +1,40 @@
+﻿@{
+    Bundles.Reference("Extends/CommonJS", "global");
+    Bundles.Reference("Extends/Components/Common", "global");
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="Shortcut Icon" href="@ViewBag.BaseUrl/favicon.ico">
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+    <script>
+        var _bl_ = "@ViewBag.BaseUrl";
+    </script>
+    <script src="@ViewBag.BaseUrl/Reference/is.min.js"></script>
+    @Html.Partial("UpgradeBrowser")
+    
+    <link href="@ViewBag.BaseUrl/Reference/mCustomScrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+    <link href="@ViewBag.BaseUrl/Reference/antd-2.9.1/antd.min.css" rel="stylesheet" />
+    <link href="@ViewBag.BaseUrl/Reference/ctfont/iconfont.css" rel="stylesheet" />
+    <link href="@ViewBag.BaseUrl/Reference/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="@ViewBag.BaseUrl/Extends/globalStyle.css" rel="stylesheet" />
+
+    <script src="@ViewBag.BaseUrl/Extends/CommonJS/jsExtends.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/jquery-1.12.4.min.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/react-15.3.2/react.min.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/react-15.3.2/react-dom.min.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/antd-2.9.1/antd.min.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/toastr/toastr.min.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/store.min.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/clipboard.min.js"></script>
+    @Bundles.RenderStylesheets("global")
+    @Bundles.RenderScripts("global")
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿@import "~/Extends/default.less";
+
+.serivce-searchbar {
+    /*width: 400px;*/
+    .btn-search-clear {
+        display: none;
+        position: absolute;
+        right: 60px;
+        z-index: 9;
+        top: 8px;
+        font-size: 16px;
+        color: #aaa;
+        transition: 0.3s ease-out;
+        cursor: pointer;
+    }
+
+    .btn-search-clear:hover {
+        color: #ccc;
+    }
+
+    .btn-search-clear.active {
+        display: block;
+    }
+
+    .ant-btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        font-weight: 700;
+        width: 50px;
+    }
+}
+
+.service-result {
+    font-size: 13px;
+
+    .service-result-total {
+        border: 1px solid @border-color-base;
+        border-radius: 3px;
+        margin-top: 10px;
+        padding: 5px 20px;
+        font-size: 16px;
+        color: #333;
+
+        span {
+            display: inline-block;
+            margin: 0 10px;
+            color: #ff6a00;
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+
+    .service-item {
+        border: 1px solid @border-color-base;
+        border-radius: 3px;
+        margin-top: 10px;
+        padding: 10px 20px;
+        transition: 0.3s ease-out;
+
+        h3 {
+            /*color: #333;*/
+            color: @primary-color;
+            padding-bottom: 8px;
+            border-bottom: 1px solid @border-color-split;
+            transition: 0.3s ease-out;
+        }
+
+        img {
+            height: 100px;
+            width: 140px;
+            float: left;
+            border: 1px solid @border-color-split;
+        }
+
+        .service-item-content {
+            width: 420px;
+            float: left;
+            overflow: hidden;
+            padding-top: 5px;
+            padding-left: 15px;
+            line-height: 22px;
+        }
+    }
+
+    .service-item:hover {
+        border-color: @info-color;
+        box-shadow: 0 0 10px 0 @info-color;
+
+        h3 {
+            border-color: @info-color;
+        }
+    }
+}

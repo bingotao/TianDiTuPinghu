@@ -1,0 +1,272 @@
+﻿{
+  "Title": "天地图·平湖",
+  "DbConStr": "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=ORCL)));user id=tianditupinghu;Password=jxgis;",
+  "RoutePanning": {
+    "Base": "http://api.tianditu.com/apiserver/ajaxproxy?proxyReqUrl=",
+    "Bus": "http://map.tianditu.com/query.shtml?postStr={{'startposition':'{0},{1}','endposition':'{2},{3}','linetype':'{4}'}}&type=busline",
+    "Driving": "http://map.tianditu.com/query.shtml?postStr={{'orig':'{0},{1}','dest':'{2},{3}','style':'{4}'}}&type=search"
+  },
+  "POI": {
+    "MaxPageSize": 100
+  },
+  "Home": {
+    "NewsCount": 5
+  },
+  "Browsers": {
+    "chrome": "http://rj.baidu.com/search/index/?kw=%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8",
+    "ie": "http://rj.baidu.com/search/index/?kw=ie11",
+    "firefox": "http://rj.baidu.com/search/index/?kw=firefox",
+    "qh360": "http://rj.baidu.com/search/index/?kw=360%25E6%259E%2581%25E9%2580%259F%25E6%25B5%258F%25E8%25A7%2588%25E5%2599%25A8%2520"
+  },
+  "Map": {
+    "FullExtent": {
+      "Zoom": 13,
+      "X": 121.02058410644533,
+      "Y": 30.697563734811315
+    },
+    "InitPosition": {
+      "Zoom": 18,
+      "X": 121.01045711597716,
+      "Y": 30.679394077598445
+    },
+    "Navs": [
+      {
+        "name": "首页",
+        "href": "/Home/Index"
+      },
+      {
+        "name": "资源中心",
+        "href": "/ResourceCenter/Services"
+      },
+      {
+        "name": "在线制图",
+        "href": "#"
+      },
+      {
+        "name": "典型应用",
+        "href": "/ResourceCenter/Applications"
+      },
+      {
+        "name": "地信成果",
+        "href": "/ResourceCenter/DataAchievements"
+      },
+      {
+        "name": "地图API",
+        "href": "#"
+      }
+    ],
+    "Layers": [
+      {
+        "key": "0",
+        "name": "历史地图",
+        "children": [
+          {
+            "key": "0-0",
+            "name": "2000年左右影像",
+            "layerInfo": { }
+          },
+          {
+            "key": "0-1",
+            "name": "70年代影像",
+            "layerInfo": { }
+          }
+        ]
+      },
+      {
+        "key": "1",
+        "name": "公共服务",
+        "children": [
+          {
+            "key": "1-0",
+            "name": "电信营业网点",
+            "layerInfo": { }
+          },
+          {
+            "key": "1-1",
+            "name": "移动营业网点",
+            "layerInfo": { }
+          },
+          {
+            "key": "1-2",
+            "name": "联通营业网点",
+            "layerInfo": { }
+          },
+          {
+            "key": "1-3",
+            "name": "邮政营业网点",
+            "layerInfo": { }
+          },
+          {
+            "key": "1-4",
+            "name": "银行分支机构",
+            "layerInfo": { }
+          }
+        ]
+      }
+    ],
+    "SearchCategory": [
+      {
+        "name": "餐饮美食",
+        "color": "#ed7862",
+        "picture": "/Reference/image/餐饮美食.png",
+        "sub": [
+          {
+            "name": "中餐馆",
+            "codes": [ "120201" ]
+          },
+          {
+            "name": "日韩、西餐厅",
+            "codes": [ "120202" ]
+          },
+          {
+            "name": "茶酒咖啡",
+            "codes": [ "140312", "140310", "140311" ]
+          },
+          {
+            "name": "快餐店",
+            "codes": [ "120204" ]
+          }
+        ]
+      },
+      {
+        "name": "旅游住宿",
+        "color": "#47bfc3",
+        "picture": "/Reference/image/旅游住宿.png",
+        "sub": [
+          {
+            "name": "星级宾馆酒店",
+            "codes": [ "120101" ]
+          },
+          {
+            "name": "一般宾馆酒店",
+            "codes": [ "120102" ]
+          },
+          {
+            "name": "连锁酒店",
+            "codes": [ "120103" ]
+          }
+        ]
+      },
+      {
+        "name": "交通运输",
+        "color": "#f4aa42",
+        "picture": "/Reference/image/交通运输.png",
+        "sub": [
+          {
+            "name": "售票",
+            "codes": [ "170801" ]
+          },
+          {
+            "name": "机场车站码头",
+            "codes": [ "1701" ]
+          },
+          {
+            "name": "停车场",
+            "codes": [ "170401" ]
+          },
+          {
+            "name": "加油站",
+            "codes": [ "170501" ]
+          }
+        ]
+      },
+      {
+        "name": "娱乐消费",
+        "color": "#7e99d9",
+        "picture": "/Reference/image/娱乐消费.png",
+        "sub": [
+          {
+            "name": "旅游",
+            "codes": [ "13" ]
+          },
+          {
+            "name": "购物",
+            "codes": [ "15" ]
+          },
+          {
+            "name": "娱乐",
+            "codes": [ "14" ]
+          }
+        ]
+      },
+      {
+        "name": "公共生活",
+        "color": "#99bd61",
+        "picture": "/Reference/image/公共生活.png",
+        "sub": [
+          {
+            "name": "医院",
+            "codes": [ "160301", "160302", "160303" ]
+          },
+          {
+            "name": "门诊",
+            "codes": [ "160304" ]
+          },
+          {
+            "name": "药店",
+            "codes": [ "150406" ]
+          }
+        ]
+      }
+    ]
+  },
+  "ResourceCenter": {
+    "Navs": [
+      [ "首页", "/Home/Index" ],
+      [ "服务展示", "/ResourceCenter/Services" ],
+      [ "服务说明", "#" ],
+      [ "地信成果", "/ResourceCenter/DataAchievements" ],
+      [ "典型应用", "/ResourceCenter/Applications" ],
+      [ "二次开发", "#" ]
+    ]
+  },
+  "Services": {
+    "Categories": [
+      {
+        "title": "服务类型",
+        "filters": [
+          {
+            "name": "WMS服务",
+            "type": "WMS",
+            "dataType": ""
+          },
+          {
+            "name": "WFS服务",
+            "type": "WFS",
+            "dataType": ""
+          },
+          {
+            "name": "WCS服务",
+            "type": "WCS",
+            "dataType": ""
+          },
+          {
+            "name": "WMTS服务",
+            "type": "WMTS",
+            "dataType": ""
+          },
+          {
+            "name": "WFS-G服务",
+            "type": "WFS-G",
+            "dataType": ""
+          }
+        ]
+      },
+      {
+        "title": "数据类型",
+        "filters": [
+          {
+            "name": "矢量数据",
+            "type": "",
+            "dataType": "vec"
+          },
+          {
+            "name": "影像数据",
+            "type": "",
+            "dataType": "img"
+          }
+        ]
+      }
+    ]
+  }
+}

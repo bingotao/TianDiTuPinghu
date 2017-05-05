@@ -1,0 +1,27 @@
+﻿@import "~/Extends/default.less";
+
+.layercontrol {
+    height: 100%;
+    padding: 20px 0;
+    /*border: 1px dotted @border-color-split;*/
+    border-radius: 3px;
+    padding-left: 20px;
+
+    .layercontrol-container {
+        /*padding-bottom: 10px;*/
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .ant-tree {
+        font-size: 13px;
+    }
+
+    .layer-item.active {
+        color: @primary-color;
+    }
+
+    .layer-item .iconfont {
+        transform: translateY(1px);
+    }
+}

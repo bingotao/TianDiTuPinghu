@@ -1,0 +1,60 @@
+﻿@import "~/Extends/default.less";
+
+.areasearch {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 999;
+    padding-top: 30px;
+    transition: 0.3s ease;
+
+    .areasearchgroup {
+        position: relative;
+        padding-left: 50px;
+        padding-right: 20px;
+        margin-bottom: 10px;
+
+        .areasearchgroup-fallback {
+            position: absolute;
+            left: 10px;
+            height: 100%;
+            width: 40px;
+            text-align: center;
+            line-height: 48px;
+            font-size: 22px;
+            font-weight: 700;
+            color: #666;
+        }
+    }
+
+    .areasearchcategory {
+        padding: 10px 20px;
+
+        h3 {
+            color: #333;
+            margin: 0;
+            margin-bottom: 5px;
+            padding-left: 10px;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        > div {
+            color: #666;
+            font-size: 14px;
+
+            span {
+                display: inline-block;
+                padding: 5px 10px;
+            }
+        }
+    }
+}
+
+.areasearch.active {
+    top: 0;
+}

@@ -1,0 +1,63 @@
+﻿@{
+    Layout = null;
+    Bundles.Reference("Extends/CommonJS", "global");
+    Bundles.Reference("Extends/Components/MapMobile", "page");
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>@ViewBag.Title</title>
+    <script>
+        var _bl_="@ViewBag.BaseUrl";
+    </script>
+    <link href="@ViewBag.BaseUrl/Reference/antd-mobile/antd-mobile.min.css" rel="stylesheet" />
+
+    <link href="@ViewBag.BaseUrl/Reference/leaflet/leaflet.css" rel="stylesheet" />
+    <link href="@ViewBag.BaseUrl/Reference/leaflet-plugins/fullScreen/Control.FullScreen.css" rel="stylesheet" />
+    <link href="@ViewBag.BaseUrl/Reference/leaflet-plugins/draw/leaflet.draw.css" rel="stylesheet" />
+    <link href="@ViewBag.BaseUrl/Reference/leaflet-plugins/contextmenu/leaflet.contextmenu.min.css" rel="stylesheet" />
+    <link href="@ViewBag.BaseUrl/Reference/ctfont/iconfont.css" rel="stylesheet" />
+
+    <script src="@ViewBag.BaseUrl/Reference/jquery-1.12.4.min.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/react-15.3.2/react.min.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/react-15.3.2/react-dom.min.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/antd-mobile/antd-mobile.min.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/leaflet/leaflet.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/leaflet-plugins/fullScreen/Control.FullScreen.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/leaflet-plugins/draw/leaflet.draw.js"></script>
+    <script src="@ViewBag.BaseUrl/Reference/leaflet-plugins/contextmenu/leaflet.contextmenu.min.js"></script>
+    @Bundles.RenderStylesheets("global")
+    @Bundles.RenderScripts("global")
+</head>
+<body>
+    <div id="mapmobile" class="map-mobile">
+        <div class="mm-title">
+            <i class="anticon anticon-search"></i>
+        </div>
+        <div id="mapcontainer">
+            <div id="map">
+
+            </div>
+            <div id="toolbar">
+
+            </div>
+            <div id="otools"></div>
+        </div>
+        <div id="resultpanel"></div>
+        <div id="search"></div>
+        <div id="routeplanning"></div>
+        <div id="areasearch"></div>
+    </div>
+    <script>
+        var config = @Html.Raw(@ViewBag.Map);
+    </script>
+    @Bundles.RenderStylesheets("page")
+    @Bundles.RenderScripts("page")
+
+</body>
+</html>

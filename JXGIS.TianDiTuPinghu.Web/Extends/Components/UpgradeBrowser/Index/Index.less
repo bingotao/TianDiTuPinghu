@@ -1,0 +1,40 @@
+﻿@import '~/Extends/default.less';
+
+html, body, #app, .upgradebrowser {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.upgradebrowser {
+    .browsers {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        height: 400px;
+        width: 800px;
+        margin-top: -200px;
+        margin-left: -400px;
+        background-image: url("@{_bl_}/Reference/image/UpgradeBrowser_ie11.png");
+
+        > div {
+            position: absolute;
+            top: 195px;
+            left: 200px;
+            @height: 140px;
+            @width: 140px;
+            position: absolute;
+            height: @height;
+            width: @width * 4;
+
+            a {
+                float: left;
+                height: @height;
+                width: @width;
+                cursor: pointer;
+            }
+        }
+    }
+}

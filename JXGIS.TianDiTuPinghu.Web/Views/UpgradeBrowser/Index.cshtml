@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+    Bundles.Reference("Extends/Components/UpgradeBrowser", "page");
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="Shortcut Icon" href="@ViewBag.BaseUrl/favicon.ico">
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+    <script>
+        var _bl_ = "@ViewBag.BaseUrl";
+    </script>
+</head>
+<body>
+    <div id="app">
+        <div class="upgradebrowser">
+            <div class="browsers">
+                <div>
+                    <a target="_blank" href="@ViewBag.chrome"></a>
+                    <a target="_blank" href="@ViewBag.ie"></a>
+                    <a target="_blank" href="@ViewBag.firefox"></a>
+                    <a target="_blank" href="@ViewBag.qh360"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Bundles.RenderStylesheets("page")
+    @Bundles.RenderScripts("page")
+</body>
+</html>

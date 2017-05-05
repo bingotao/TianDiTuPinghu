@@ -1,0 +1,62 @@
+﻿@import "~/Extends/default.less";
+
+#applist {
+    width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+
+
+    .app-item {
+        border: 1px solid @border-color-base;
+        border-radius: 3px;
+        transition: 0.3s all ease-out;
+        margin: 10px;
+        padding: 10px 20px;
+
+        img {
+            float: left;
+            height: 110px;
+            width: 150px;
+            border: 1px solid @border-color-split;
+        }
+
+        div {
+            float: left;
+            width: 660px;
+            padding: 10px;
+            padding-top: 0;
+
+            h3 {
+                padding-bottom: 5px;
+                border-bottom: 1px solid @border-color-split;
+                font-size: 15px;
+                transition: 0.3s all ease-out;
+
+                a {
+                    color: #333;
+                    transition: 0.3s all ease-out;
+                }
+            }
+
+            p {
+                padding-top: 5px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    .app-item:hover {
+        box-shadow: 0 0 8px 0 @info-color;
+        border-color: @info-color;
+
+        div {
+            h3 {
+                border-color: @info-color;
+
+                a {
+                    color: @info-color;
+                }
+            }
+        }
+    }
+}

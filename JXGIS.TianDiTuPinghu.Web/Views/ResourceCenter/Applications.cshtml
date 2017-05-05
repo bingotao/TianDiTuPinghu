@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterResourceCenter.cshtml";
+    Bundles.Reference("Extends/Components/Applications", "page");
+}
+
+<script>
+    var config = {
+        apps:@Html.Raw(@ViewBag.Apps)
+        } ;
+</script>
+<div id="applist">
+
+</div>
+@Bundles.RenderStylesheets("page")
+@Bundles.RenderScripts("page")

@@ -1,0 +1,77 @@
+﻿@import "~/Extends/default.less";
+
+.content {
+    width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+
+    .results-list {
+        float: left;
+        width: e("calc(30% - 10px)");
+        border: 1px solid @border-color-split;
+        border-radius: 3px;
+        padding: 5px 10px;
+        background: #fafafa;
+        margin-right: 10px;
+
+        h3 {
+            color: #333;
+            border-bottom: 2px solid rgb(255, 193, 102);
+            padding-bottom: 5px;
+            padding: 7px;
+        }
+    }
+
+    .results-details {
+        float: left;
+        width: 70%;
+        padding: 5px;
+
+        .results-note {
+            padding: 8px 20px;
+            margin-top: 10px;
+            background: #eee;
+            border-radius: 3px;
+            color: #333;
+        }
+
+        h3 {
+            color: #333;
+            border-bottom: 2px solid rgb(255, 193, 102);
+            padding-bottom: 5px;
+            padding: 7px;
+        }
+    }
+
+    h3 {
+
+        .anticon {
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+}
+
+.ant-tabs-tab-active.ant-tabs-tab {
+    font-weight: 700;
+}
+
+.ant-tabs-ink-bar {
+    height: 3px;
+}
+
+.ct-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid @border-color-base;
+
+    th, td {
+        border: 1px solid@border-color-split;
+        padding: 5px;
+    }
+
+    th {
+        color: #333;
+    }
+}

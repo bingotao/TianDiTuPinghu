@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterResourceCenter.cshtml";
+    Bundles.Reference("Extends/Components/DataAchievements", "page");
+}
+
+<div class="content clearfix">
+    <div class="results-list">
+        <h3><i class="anticon anticon-bars"></i>&nbsp;&nbsp;&nbsp;&nbsp;资源目录</h3>
+        <div id="list" class="results-list-content">
+
+        </div>
+    </div>
+    <div class="results-details">
+        <h3><i class="anticon anticon-link"></i>&nbsp;&nbsp;&nbsp;&nbsp;浏览元数据</h3>
+        <div class="results-note">目前操作功能：查看元数据</div>
+        <div id="detail" class="results-details-content"></div>
+    </div>
+</div>
+@Bundles.RenderStylesheets("page")
+@Bundles.RenderScripts("page")

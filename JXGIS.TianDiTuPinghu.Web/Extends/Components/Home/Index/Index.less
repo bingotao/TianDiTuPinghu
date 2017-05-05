@@ -1,0 +1,448 @@
+﻿@import "~/Extends/default.less";
+
+@width: 900px;
+@base-color: rgb(255,151,0);
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.main {
+
+    .header, .messager, .apps, .typicaluse {
+        position: relative;
+        margin: 0 auto;
+        width: @width;
+    }
+
+    .header {
+        height: 75px;
+        background: no-repeat;
+        background-image: url("@{_bl_}/Reference/image/logo-title.png");
+
+        ul {
+            float: right;
+            height: 100%;
+            display: table;
+
+            li {
+                height: 100%;
+                display: table-cell;
+                padding: 0 20px;
+                vertical-align: middle;
+                list-style: none;
+                border-color: rgba(0,0,0,0);
+                border-top-width: 6px;
+                border-top-style: solid;
+                font-size: 18px;
+                transition: 0.3s ease-out;
+
+                a {
+                    height: 100%;
+                    color: #444;
+                }
+
+                a:hover {
+                    color: @base-color;
+                }
+            }
+
+            li:hover {
+                border-top-color: tint(@base-color,30%);
+            }
+
+            li.active {
+                border-color: @base-color;
+            }
+        }
+    }
+
+    .description {
+        position: relative;
+        width: 100%;
+        height: 350px;
+
+        #sections {
+            position: absolute;
+            height: 100%;
+            width: @width;
+            top: 0;
+            left: 50%;
+            margin-left: -@width/2;
+        }
+
+        .section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 350px;
+            width: 100%;
+            opacity: 0;
+            z-index: -1;
+            transition: 0.3s all ease;
+
+            .description-text {
+                color: white;
+                position: absolute;
+                top: 100px;
+                left: 70px;
+                font-size: 20px;
+                width: 300px;
+                text-indent: 40px;
+                letter-spacing: 5px;
+                line-height: 40px;
+            }
+
+            .bg-small {
+                position: absolute;
+                top: 25px;
+                right: 60px;
+            }
+
+            a {
+                margin-top: 20px;
+                display: block;
+                width: 150px;
+                text-align: center;
+                text-indent: 0;
+                font-size: 16px;
+                color: white;
+                border-radius: 5px;
+                transition: 0.2s ease;
+            }
+        }
+
+        .section.active {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .bg-big {
+            width: 100%;
+            height: 350px;
+        }
+
+        .section1 {
+            @bg-color: #e69e38;
+
+            a {
+                background-color: @bg-color;
+            }
+
+            a:hover {
+                background-color: tint( @bg-color,20%);
+            }
+        }
+
+        .section2 {
+            @bg-color: #86be35;
+
+            a {
+                background-color: @bg-color;
+            }
+
+            a:hover {
+                background-color: tint( @bg-color,20%);
+            }
+        }
+
+        .section3 {
+            @bg-color: #3598db;
+
+            a {
+                background-color: @bg-color;
+            }
+
+            a:hover {
+                background-color: tint( @bg-color,20%);
+            }
+        }
+
+        .section4 {
+            @bg-color: #eb3f3f;
+
+            a {
+                background-color: @bg-color;
+            }
+
+            a:hover {
+                background-color: tint( @bg-color,20%);
+            }
+        }
+
+        .searchgroup {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            margin-left: -400px;
+            width: 350px;
+            padding: 8px 20px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            z-index: 999;
+            border: 1px solid rgba(0,0,0,0);
+
+            input {
+                width: 280px;
+                outline: none;
+                border: none;
+                background: rgba(0,0,0,0);
+                color: white;
+                font-size: 14px;
+            }
+
+            button {
+                position: absolute;
+                top: 0;
+                right: 15px;
+                color: white;
+                background: rgba(0, 0, 0, 0);
+                font-size: 24px;
+                border: none;
+                outline: none;
+                font-weight: 800;
+                cursor: pointer;
+            }
+
+            .btnclear {
+                display: none;
+                position: absolute;
+                top: 10px;
+                right: 50px;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+
+        .searchgroup.active {
+            box-shadow: 0 0 10px 0 white;
+            border-color: #eee;
+
+            .btnclear {
+                display: block;
+            }
+        }
+    }
+
+    .apps {
+        padding: 20px;
+        margin-top: 10px;
+
+        ul {
+            display: table;
+            width: 100%;
+
+            li {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+                width: 25%;
+                padding: 0 10px;
+            }
+
+            a {
+                display: table-cell;
+                height: 70px;
+                width: 190px;
+                border-radius: 7px;
+                vertical-align: middle;
+                color: white;
+                font-size: 22px;
+                transition: 0.2s ease;
+
+                .iconfont {
+                    font-size: 40px;
+                }
+
+                span {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+
+                span:first-child {
+                    padding: 0 15px 0 20px;
+                }
+            }
+        }
+
+        @zxdt: rgb(230,158,56);
+        @zhfw: rgb(134,190,53);
+        @zyzx: rgb(53,152,219);
+        @zxzt: rgb(235,63,63);
+
+        .zxdt {
+            background-color: @zxdt;
+
+            span:first-child {
+                transform: translateY(2px);
+                font-size: 46px;
+            }
+        }
+
+        .zxdt:hover {
+            background-color: tint(@zxdt,20%);
+        }
+
+        .zhfw {
+            background-color: @zhfw;
+
+            span:first-child {
+                transform: translateY(2px);
+            }
+        }
+
+        .zhfw:hover {
+            background-color: tint(@zhfw,20%);
+        }
+
+        .zyzx {
+            background-color: @zyzx;
+
+            span:first-child {
+                transform: translateY(-2px);
+            }
+        }
+
+        .zyzx:hover {
+            background-color: tint(@zyzx,20%);
+        }
+
+        .zxzt {
+            background-color: @zxzt;
+        }
+
+        .zxzt:hover {
+            background-color: tint(@zxzt,20%);
+        }
+    }
+
+    .typicaluse {
+        .ct-slider-pre, .ct-slider-next {
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            border-radius: 3px;
+            font-size: 24px;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .ct-slider-pre:hover, .ct-slider-next:hover {
+            color: #444;
+        }
+
+        .ct-slider-pre {
+            left: -30px;
+        }
+
+        .ct-slider-next {
+            right: -30px;
+        }
+
+        .typicaluse-text {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 30px;
+            color: #444;
+            letter-spacing: 5px;
+        }
+
+        .typicaluse-text:before, .typicaluse-text:after {
+            content: '';
+            height: 2px;
+            width: 160px;
+            display: block;
+            position: absolute;
+            top: 22px;
+        }
+
+        .typicaluse-text:before {
+            left: 180px;
+            background: linear-gradient(to right,white,#666);
+        }
+
+        .typicaluse-text:after {
+            right: 180px;
+            background: linear-gradient(to left,white,#666);
+        }
+    }
+
+    .footer {
+        border-top: 2px solid tint(#ff9700,40%);
+        padding: 20px 0 30px 0;
+        text-align: center;
+        font-size: 14px;
+        color: #444;
+        margin-top: 50px;
+    }
+
+    .app-item {
+        width: 200px;
+        margin: 0 auto;
+
+        div {
+            width: 210px;
+            padding-top: 40px;
+            border: 1px solid @base-color;
+            margin-top: -40px;
+            margin-left: -5px;
+            padding-bottom: 10px;
+        }
+
+        img {
+            height: 150px;
+            width: 100%;
+        }
+
+        a, p {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        a.app-item-title {
+            white-space: nowrap;
+            margin-top: 10px;
+            height: 20px;
+            line-height: 20px;
+            padding: 0 20px;
+            font-size: 14px;
+            color: @base-color;
+            text-align: center;
+            transition: 0.3s ease-out;
+        }
+
+        a:hover {
+            color: tint( @base-color,20%);
+        }
+
+        p {
+            padding: 3px 15px;
+            height: 65px;
+            position: relative;
+            overflow: hidden;
+            color: #444;
+            line-height: 20px;
+        }
+    }
+
+    .messager {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #444;
+    }
+
+    .news {
+        .new-a {
+            color: @primary-color;
+        }
+
+        .new-a:hover {
+            color: tint(@primary-color,20%);
+        }
+    }
+}

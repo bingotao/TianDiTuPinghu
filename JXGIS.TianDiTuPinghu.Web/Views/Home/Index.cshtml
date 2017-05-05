@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterBlank.cshtml";
+    Bundles.Reference("Extends/Components/Home", "page");
+}
+<script>
+    var config = @Html.Raw(ViewBag.Home);
+    var news=@Html.Raw(ViewBag.News);
+</script>
+
+<div class="main">
+    <div class="header">
+        <ul>
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="@ViewBag.BaseUrl/ResourceCenter/Applications">典型应用</a></li>
+            <li><a href="#">地图API</a></li>
+            <li><a href="@ViewBag.BaseUrl/ResourceCenter/DataAchievements">地信成果</a></li>
+            <li><a href="#">工作动态</a></li>
+        </ul>
+    </div>
+    <div class="description">
+        <div id="searchgroup">
+        </div>
+        <img class="bg-big" src="@ViewBag.BaseUrl/Reference/image/section-big.jpg" />
+        <div id="sections">
+            <div class="section section1">
+                <img class="bg-small" src="@ViewBag.BaseUrl/Reference/image/section1-small.png" />
+                <div class="description-text">
+                    “天地图·平湖”根据事物动态变化随时更新，提供的信息方便实用。
+                    <a href="@ViewBag.BaseUrl/Map/Index">立即进入</a>
+                </div>
+            </div>
+            <div class="section section2">
+                <img class="bg-small" src="@ViewBag.BaseUrl/Reference/image/section2-small.png" />
+                <div class="description-text">
+                    “天地图·平湖”根据事物动态变化随时更新，提供的信息方便实用。
+                    <a href="#">立即进入</a>
+                </div>
+            </div>
+            <div class="section section3">
+                <img class="bg-small" src="@ViewBag.BaseUrl/Reference/image/section3-small.png" />
+                <div class="description-text">
+                    “天地图·平湖”根据事物动态变化随时更新，提供的信息方便实用。
+                    <a href="@ViewBag.BaseUrl/ResourceCenter/Services">立即进入</a>
+                </div>
+            </div>
+            <div class="section section4">
+                <img class="bg-small" src="@ViewBag.BaseUrl/Reference/image/section4-small.png" />
+                <div class="description-text">
+                    “天地图·平湖”根据事物动态变化随时更新，提供的信息方便实用。
+                    <a href="#">立即进入</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="messager">
+        <div id="news"></div>
+    </div>
+    <div class="apps">
+        <ul>
+            <li><a class="zxdt" href="@ViewBag.BaseUrl/Map/Index"><span class="iconfont icon-quanjingditu"></span><span>在线地图</span></a></li>
+            <li><a class="zhfw" href="#"><span class="iconfont icon-zonghechaxun"></span><span>综合服务</span></a></li>
+            <li><a class="zyzx" href="@ViewBag.BaseUrl/ResourceCenter/Services"><span class="iconfont icon-wenjian"></span><span>资源中心</span></a></li>
+            <li><a class="zxzt" href="#"><span class="iconfont icon-diannao"></span><span>在线制图</span></a></li>
+        </ul>
+    </div>
+    <div class="typicaluse">
+        <div class="typicaluse-text">典型应用</div>
+        <div id="typicaluse_uses" class="typicaluse-uses"></div>
+    </div>
+    <div class="footer">
+        <div>平湖市住房和城乡规划建设局主办&nbsp;&nbsp;&nbsp;&nbsp;嘉兴市规划设计研究院有限公司承办</div>
+        <div>审图号：浙S(2014)131号&nbsp;&nbsp;版权所有&nbsp;&nbsp;浙ICP备05054834号-1</div>
+        <div>CopyRight © All Right Reserved. 盗版必纠</div>
+    </div>
+</div>
+
+@Bundles.RenderStylesheets("page")
+@Bundles.RenderScripts("page")

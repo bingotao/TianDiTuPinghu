@@ -1,0 +1,109 @@
+﻿@import "~/Extends/default.less";
+
+@width: 900px;
+@base-color: rgb(255,151,0);
+
+.main {
+
+
+    .header-nav {
+        width: @width;
+        margin: 0 auto;
+    }
+
+    .header-nav {
+        height: 60px;
+        background: no-repeat;
+        background-image: url("@{_bl_}/Reference/image/logo-title.png");
+        background-position: 0 -10px;
+
+        ul {
+            float: right;
+            height: 100%;
+            display: table;
+
+            li {
+                height: 100%;
+                display: table-cell;
+                padding: 0 10px;
+                vertical-align: middle;
+                list-style: none;
+                border-color: rgba(0,0,0,0);
+                border-top-width: 6px;
+                border-top-style: solid;
+                font-size: 16px;
+                transition: 0.3s ease-out;
+
+                a {
+                    height: 100%;
+                    color: #444;
+                }
+
+                a:hover {
+                    color: @base-color;
+                }
+            }
+
+            li:hover {
+                border-top-color: tint(@base-color,30%);
+            }
+
+            li.active {
+                border-color: @base-color;
+            }
+        }
+    }
+
+    .header-img {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        background-image: url("@{_bl_}/Reference/image/bg-resourcecentre-small.jpg");
+        background-size: 100% 100%;
+
+        div {
+            position: absolute;
+            width: 300px;
+            left: 50%;
+            top: 20px;
+            margin-left: -380px;
+            color: white;
+
+            h1 {
+                letter-spacing: 6px;
+                font-weight: normal;
+            }
+
+            h2 {
+                font-weight: normal;
+            }
+        }
+        /*img {
+            width: 100%;
+            height: 100px;
+        }*/
+    }
+    /*@media screen and (min-width: 1200px) {
+        .header-img {
+            background-image: url("@{_bl_}/Reference/image/bg-resourcecentre-big.png");
+            background-size: cover;
+        }
+    }*/
+    .footer {
+        border-top: 2px solid tint(#ff9700,40%);
+        padding: 20px 0 30px 0;
+        text-align: center;
+        font-size: 14px;
+        color: #444;
+    }
+
+    .current-fun {
+        width: @width - 20px;
+        margin: 10px auto;
+        padding: 10px 20px;
+        background-color: #eee;
+        color: @primary-color;
+        border-radius: 3px;
+        font-size: 14px;
+    }
+}

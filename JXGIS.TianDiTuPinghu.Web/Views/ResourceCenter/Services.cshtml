@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterResourceCenter.cshtml";
+    Bundles.Reference("Extends/Components/Services", "page");
+}
+
+<script>
+    var config = {
+        categories:@Html.Raw(@ViewBag.Categories)
+        } ;
+</script>
+<div id="content" class="content clearfix">
+
+</div>
+@Bundles.RenderStylesheets("page")
+@Bundles.RenderScripts("page")
